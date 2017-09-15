@@ -1,1 +1,1 @@
-include ':app', ':windowmanager', ':aidlclient', ':aidlserver'
+include ':app', ':windowmanager', ':aidlclient', ':aidlserver', ':rxjava'

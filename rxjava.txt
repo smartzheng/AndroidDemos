@@ -1,0 +1,30 @@
+一.定义："a library for composing asynchronous and event-based programs using observable sequences for the Java VM"，
+一个在Java VM上使用可观测的序列来组成异步的、基于事件的程序的库
+
+二.优势：代码逻辑更简洁，易于维护
+
+三.原理
+
+1. 概念
+    扩展的观察者模式
+    四个基本概念：Observable(可观察者，即被观察者)、Observer(观察者)、subscribe(订阅)、事件。Observable和Observer通过subscribe()
+方法实现订阅关系，从而 Observable 可以在需要的时候发出事件来通知 Observer。
+
+2. 基本实现
+1) 创建 Observer
+    Observer<String> observer = new Observer<String>() {...}
+    Subscriber<String> subscriber = new Subscriber<String>() {...}
+2) 创建 Observable
+    Observable observable = Observable.create(new Observable.OnSubscribe<T>() {...});
+    just(T...): 将传入的参数依次发送出来。
+    from(T[]) / from(Iterable<? extends T>) : 将传入的数组或 Iterable 拆分成具体对象后，依次发送出来。
+3) Subscribe (订阅)
+    observable.subscribe(observer);
+    或者：
+    observable.subscribe(subscriber);
+    核心代码：
+    public Subscription subscribe(Subscriber subscriber) {
+        subscriber.onStart();
+        onSubscribe.call(subscriber);//Observable并不是在创建的时候就立即开始发送事件，而是在它被订阅的时候，即当subscribe()方法执行时。
+        return subscriber;//将传入的 Subscriber 作为 Subscription 返回。这是为了方便 unsubscribe()。
+    }
