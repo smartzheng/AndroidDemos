@@ -6,7 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/aidlclient/aidlclient.iml" filepath="$PROJECT_DIR$/aidlclient/aidlclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidlserver/aidlserver.iml" filepath="$PROJECT_DIR$/aidlserver/aidlserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/constraintlayout/constraintlayout.iml" filepath="$PROJECT_DIR$/constraintlayout/constraintlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/rxjava/rxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/virtualapkhost/virtualapkhost.iml" filepath="$PROJECT_DIR$/virtualapkhost/virtualapkhost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/virtualapkplugin/virtualapkplugin.iml" filepath="$PROJECT_DIR$/virtualapkplugin/virtualapkplugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/windowmanager/windowmanager.iml" filepath="$PROJECT_DIR$/windowmanager/windowmanager.iml" />
     </modules>
   </component>

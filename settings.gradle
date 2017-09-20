@@ -1,1 +1,1 @@
-include ':app', ':windowmanager', ':aidlclient', ':aidlserver', ':rxjava'
+include ':app', ':windowmanager', ':aidlclient', ':aidlserver', ':rxjava', ':virtualapkhost', ':virtualapkplugin', ':constraintlayout'
