@@ -1,7 +1,13 @@
+// IBookManager.aidl
 package com.zs.aidlserver;
 import com.zs.aidlserver.Book;
+// Declare any non-default types here with import statements
 
 interface IBookManager {
-    void getBookList();
+    /**
+     * Demonstrates some basic types that you can use as parameters
+     * and return values in AIDL.
+     */
+    List<Book> getBookList();
     void addBook(inout Book book);
 }

@@ -8,6 +8,6 @@ interface IBookManager {
      * Demonstrates some basic types that you can use as parameters
      * and return values in AIDL.
      */
-    void getBookList();
+    List<Book> getBookList();
     void addBook(inout Book book);
 }

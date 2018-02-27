@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         //创建SAXReader对象
         SAXReader reader = new SAXReader();
         //读取文件 转换成Document
-        Document document = reader.read(new File("src/cn/com/yy/dom4j/s.xml"));
+        Document document = reader.read(new File("UiLibrary.xml"));
         //获取根节点元素对象
         Element root = document.getRootElement();
         listNodes(root);

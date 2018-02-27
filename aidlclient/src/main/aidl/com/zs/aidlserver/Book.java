@@ -1,4 +1,4 @@
-package com.zs.bookclient;
+package com.zs.aidlserver;
 
 /**
  * Created by smartzheng on 2017/6/20.
@@ -9,12 +9,12 @@ import android.os.Parcelable;
 
 /**
  * Book.java
- *
+ * <p>
  * Created by lypeer on 2016/7/16.
  */
 public class Book implements Parcelable {
-    private String name;
-    private int price;
+    public String name;
+    public int price;
 
     @Override
     public int describeContents() {
@@ -27,7 +27,9 @@ public class Book implements Parcelable {
         dest.writeInt(this.price);
     }
 
-    public Book() {
+    public Book(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
     protected Book(Parcel in) {
@@ -35,7 +37,7 @@ public class Book implements Parcelable {
         this.price = in.readInt();
     }
 
-    public static final Parcelable.Creator<Book> CREATOR = new Parcelable.Creator<Book>() {
+    public static final Creator<Book> CREATOR = new Creator<Book>() {
         @Override
         public Book createFromParcel(Parcel source) {
             return new Book(source);
@@ -46,4 +48,8 @@ public class Book implements Parcelable {
             return new Book[size];
         }
     };
+    public void readFromParcel(Parcel in){
+        name = in.readString();
+        price = in.readInt();
+    }
 }
